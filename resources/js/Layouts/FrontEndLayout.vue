@@ -18,8 +18,8 @@ export default {
 <template>
   <Head title="Welcome"/>
   <main class="container flex flex-col gap-0">
-    <header class="flex flex-none justify-end h-[15%] w-screen bg-[#414042] text-white">
-      <NavBar/>
+    <header class="flex-none h-[15%] w-screen bg-[#414042] text-white">
+      <NavBar />
     </header>
     <div class="flex flex-col md:flex-row-reverse h-[85%] w-screen gap-0">
       <section
