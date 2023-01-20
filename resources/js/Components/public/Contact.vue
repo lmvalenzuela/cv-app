@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Componente contacto</p>
+    Contacto
   </div>
 </template>
 

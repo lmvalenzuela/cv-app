@@ -18,24 +18,24 @@ export default {
 <template>
   <Head title="Welcome"/>
   <main class="container flex flex-col gap-0">
-    <header class="flex-none h-[15%] w-screen bg-[#414042] text-white">
+    <header class="flex-none h-[15%] w-screen bg-[#414042] text-white z-10">
       <NavBar />
     </header>
-    <div class="flex flex-col md:flex-row-reverse h-[85%] w-screen gap-0">
+    <div class="flex flex-col lg:flex-row-reverse h-[85%] w-screen gap-0 z-0">
+<!-- md:flex-grow-0 md:w-[66%]  md:h-full      -->
       <section
-          class="flex-grow-1 md:flex-grow-0 md:w-[76%] gap-0 justify-center align-content-center h-[70%] md:h-full">
+          class="gap-0 justify-center align-content-center h-[70%] flex-grow-0 lg:w-[73%] lg:h-full">
         <div>
           <slot/>
         </div>
       </section>
-      <section
-          class="flex md:flex-col md:w-[24%] gap-0 justify-center align-content-center h-[30%] md:h-full w-screen">
-        <div class="flex flex-col w-[50%] md:w-full md:h-[30%] bg-[#E6E7E8]">
+      <section class="gap-0 h-[30%] lg:w-[27%] lg:h-full">
+        <div class="h-[25%] p-2">
           <!--NameBar-->
           <NameBar/>
           <!--/NameBar-->
         </div>
-        <div class="flex flex-col md:flex-row w-[50%] md:w-full md:h-[70%] bg-[#414042] text-white">
+        <div class="h-[75%] p-2 bg-[#414042] text-white">
           <Contact/>
         </div>
       </section>
