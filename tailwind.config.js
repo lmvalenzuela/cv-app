@@ -14,8 +14,8 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Raleway', ...defaultTheme.fontFamily.sans],
-                montserrat: ['Montserrat', 'sans-serif'],
-                lato: ['Lato', 'sans-serif']
+                serif: ['Montserrat', 'sans-serif'],
+                mono: ['Lato', 'sans-serif']
             },
         },
     },
