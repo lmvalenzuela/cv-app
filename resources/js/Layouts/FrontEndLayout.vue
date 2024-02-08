@@ -1,36 +1,31 @@
-<script>
-import {Head} from "@inertiajs/inertia-vue3";
-import NavBar from "../Components/public/NavBar.vue";
-import NameBar from "../Components/public/NameBar.vue";
-import Contact from "../Components/public/Contact.vue";
+<script setup>
+import {computed} from "vue";
+import {Head, usePage} from '@inertiajs/inertia-vue3'
+import NavBar from '../Components/public/NavBar.vue'
+import NameBar from '../Components/public/NameBar.vue'
+import Contact from '../Components/public/Contact.vue'
 
+const page = usePage()
+const profileLegend = computed(() => page.props.value.profile)
+console.log(page)
 
-export default {
-  name: "FrontEndLayout.vue",
-  components: {
-    Head,
-    Contact,
-    NameBar,
-    NavBar
-  }
-}
 </script>
 <template>
   <Head title="CV-APP"/>
   <main class="container flex flex-col gap-0">
-    <header class="flex-none h-[15%] w-screen bg-[#414042] text-white z-10">
-      <NavBar />
+    <header class="flex-none w-screen bg-[#414042] text-white z-10">
+      <NavBar/>
     </header>
-    <div class="flex flex-col lg:flex-row-reverse h-[85%] w-screen gap-0 z-0">
-<!-- md:flex-grow-0 md:w-[66%]  md:h-full      -->
+    <div class="flex flex-col lg:flex-row-reverse h-full w-screen gap-0 z-0">
+      <!-- md:flex-grow-0 md:w-[66%]  md:h-full      -->
       <section
-          class="gap-0 justify-center align-content-center h-[70%] flex-grow-0 lg:w-[73%] lg:h-full">
+          class="gap-0 justify-center align-content-center mt-2 h-[70%] flex-grow-0 lg:w-[73%] lg:h-full">
         <div class="flex m-2">
           <div class="flex-col">
-            <img src="/storage/images/perfil.png" />
+            <img src="/storage/images/perfil.png"/>
           </div>
           <div class="flex-col w-100 ml-3">
-            <p class="font-sans text-3xl font-bold text-[#414042]">Perfil</p>
+            <p class="font-sans text-3xl font-bold text-[#414042]">{{ profileLegend }}</p>
             <hr style="border:solid 2px #00AEEF"/>
             <div class="mt-2">
               <slot/>

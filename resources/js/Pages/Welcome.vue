@@ -1,13 +1,6 @@
 <script>
 import FrontEndLayout from '../Layouts/FrontEndLayout.vue'
 
-/*defineProps({
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
-    layout: FrontEndLayout
-});*/
 export default {
   layout: FrontEndLayout,
   props: {
